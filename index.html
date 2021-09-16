@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <meta name="author" content="Kemal Erdem">
 
-  <title>Presentation Template by Kemal Erdem</title>
+  <title>Coffe Seminar!</title>
 
   <link rel="stylesheet" href="dist/reset.css">
   <link rel="stylesheet" href="dist/reveal.css">
@@ -15,20 +15,101 @@
   <link rel="stylesheet" href="dist/theme/black.css" id="theme">
 
   <!-- Theme used for syntax highlighting of code -->
-  <link rel="stylesheet" href="css/highlight/isbl-editor-light.css">
+  <link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+
 </head>
 <body>
 <div class="reveal">
   <div class="slides">
+
     <section class="main-slide">
-      <h2>Presentation Template</h2>
-      <small>Authors...</small>
+      <h2>Better presentations with Reveal JS</h2>
+      <small>Bartosz Wójtowicz</small>
     </section>
+
     <section>
-      <h2>Presentation pointer</h2>
-      <h5>("Q" for pointer)</h5>
-      <a href="https://github.com/burnpiro/reveal-pointer">Check plugin's page for details</a>
+      <section id="fragments">
+        <h2>Let's look at the best features!</h2>
+        <p class = "fragment">Like the fragments :)</p>
+
+        <aside class="notes">
+          This slide has fragments which are also stepped through in the notes window.
+        </aside>
+      </section>
+      <section>
+        <h2>Fragment Styles</h2>
+        <p>There's different types of fragments, like:</p>
+        <p class="fragment grow">grow</p>
+        <p class="fragment shrink">shrink</p>
+        <p class="fragment fade-out">fade-out</p>
+        <p>
+          <span style="display: inline-block;" class="fragment fade-right">fade-right, </span>
+          <span style="display: inline-block;" class="fragment fade-up">up, </span>
+          <span style="display: inline-block;" class="fragment fade-down">down, </span>
+          <span style="display: inline-block;" class="fragment fade-left">left</span>
+        </p>
+        <p class="fragment fade-in-then-out">fade-in-then-out</p>
+        <p class="fragment fade-in-then-semi-out">fade-in-then-semi-out</p>
+        <p>Highlight <span class="fragment highlight-red">red</span> <span class="fragment highlight-blue">blue</span> <span class="fragment highlight-green">green</span></p>
+      </section>
     </section>
+
+    <section data-background-iframe="https://revealjs.com/" data-background-interactive>
+      <div style="position: absolute; width: 40%; right: 0; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px; font-size: 20px; text-align: left;">
+        <h2>Iframe Backgrounds</h2>
+        <p>Since reveal.js runs on the web, you can easily embed other web content. Try interacting with the page in the background.</p>
+      </div>
+    </section>
+
+    <section>
+      <section data-background="#dddddd">
+        <h2>Slide Backgrounds</h2>
+        <p>
+          Set <code>data-background="#dddddd"</code> on a slide to change the background color. All CSS color formats are supported.
+        </p>
+        <a href="#" class="navigate-down">
+          <img class="r-frame" style="background: rgba(255,255,255,0.1);" width="178" height="238" data-src="https://static.slid.es/reveal/arrow.png" alt="Down arrow">
+        </a>
+      </section>
+      <section data-background="https://static.slid.es/reveal/image-placeholder.png">
+        <h2>Image Backgrounds</h2>
+        <pre><code class="hljs html">&lt;section data-background="image.png"&gt;</code></pre>
+      </section>
+      <section data-background="https://static.slid.es/reveal/image-placeholder.png" data-background-repeat="repeat" data-background-size="100px">
+        <h2>Tiled Backgrounds</h2>
+        <pre><code class="hljs html" style="word-wrap: break-word;">&lt;section data-background="image.png" data-background-repeat="repeat" data-background-size="100px"&gt;</code></pre>
+      </section>
+      <section data-background-video="https://s3.amazonaws.com/static.slid.es/site/homepage/v1/homepage-video-editor.mp4" data-background-color="#000000">
+        <div style="background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px;">
+          <h2>Video Backgrounds</h2>
+          <pre><code class="hljs html" style="word-wrap: break-word;">&lt;section data-background-video="video.mp4,video.webm"&gt;</code></pre>
+        </div>
+      </section>
+      <section data-background="http://i.giphy.com/90F8aUepslB84.gif">
+        <h2>... and GIFs!</h2>
+      </section>
+    </section>
+
+    <section>
+      <h2>Point of View</h2>
+      <p>
+        Press <strong>ESC</strong> to enter the slide overview.
+      </p>
+      <p>
+        Hold down the <strong>alt</strong> key (<strong>ctrl</strong> in Linux) and click on any element to zoom towards it using <a href="http://lab.hakim.se/zoom-js">zoom.js</a>. Click again to zoom back out.
+      </p>
+      <p>
+        (NOTE: Use ctrl + click in Linux.)
+      </p>
+    </section>
+
+    <section>
+      <h2>Touch Optimized</h2>
+      <p>
+        Presentations look great on touch devices, like mobile phones and tablets. Simply swipe through your slides.
+      </p>
+    </section>
+
     <section class="full-width-slide">
       <h2>Drawing board </h2>
       <h5>("T" to toggle drawing board)</h5>
@@ -38,30 +119,169 @@
         (depends on your color list, if you have 5 colors then 1,2,3,4,5 etc)</p>
       <a class="small" href="https://github.com/burnpiro/reveal-drawer">Check plugin's page for details</a>
     </section>
-    <section class="full-width-compressed-slide">
-      <h2>Slide 1</h2>
-      <p class="fragment">
-        ABC
+
+    <section data-markdown>
+      <script type="text/template">
+        ## Markdown support
+
+        Write content using inline or external Markdown.
+        Instructions and more info available in the [readme](https://revealjs.com/markdown/).
+
+        ```[]
+        <section data-markdown>
+          ## Markdown support
+
+          Write content using inline or external Markdown.
+          Instructions and more info available in the [readme](https://revealjs.com/markdown/).
+        </section>
+        ```
+      </script>
+    </section>
+
+    <section>
+        <h2>And $\LaTeX$ support!</h2><br>
+
         $$
-        L_{a}T_{e}X
+        \left[ 
+        \forall_{t\geq0} \sum_{n=0}^{\infty} P(X(t) = n) = 1 
+        \iff
+        \sum_{n=0}^{\infty} \frac{1}{\lambda_n} = \infty
+        \right]
         $$
-      </p>
-      <pre><code data-trim data-noescape>
-(def lazy-fib
-  (concat
-   [0 1]
-   ((fn rfib [a b]
-        (lazy-cons (+ a b) (rfib b (+ a b)))) 0 1)))
+    </section>
+
+    <section>
+      <h3><span>Pretty Code!</span></h3>
+      <p>$\text{Attention}(Q, K, V) = \text{softmax}(\frac{QK^T}{\sqrt{d_k}})V$</p>
+      <pre data-id="code-animation"><code class="python" data-trim data-line-numbers="|1-8|10|11-13|14-15|16">
+
+class SelfAttention(nn.Module):
+  def __init__(self, emb_dim):
+    super().__init__()	
+    self.emb_dim = emb_dim
+
+    self.tokeys = nn.Linear(emb_dim, emb_dim, bias=False)
+    self.toqueries = nn.Linear(emb_dim, emb_dim, bias=False)
+    self.tovalues = nn.Linear(emb_dim, emb_dim, bias=False)	
+  def forward(self, x):
+    b, t, dk = x.size()
+    queries = self.toqueries(x)
+    keys    = self.tokeys(x)
+    values  = self.tovalues(x)		
+    dot = torch.einsum("bqe, bke -> bqk", [queries, keys])
+    softmaxed = torch.softmax(dot / (dk ** (1/2)), dim = 2)
+    out = torch.einsum("bqk, bke -> bqe", [softmaxed, values])	
+    return out					
+     
   </code></pre>
     </section>
+
+    <section id="themes">
+      <h2>Themes!</h2>
+    </section>
+
     <section>
-      <h2>Thanks</h2>
-      <blockquote>"There's no such thing as a stupid question!"</blockquote>
+      <h2>Marvelous List</h2>
+      <ul>
+        <li>No order here</li>
+        <li>Or here</li>
+        <li>Or here</li>
+        <li>Or here</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Fantastic Ordered List</h2>
+      <ol>
+        <li>One is smaller than...</li>
+        <li>Two is smaller than...</li>
+        <li>Three!</li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>Tabular Tables</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Item</th>
+            <th>Value</th>
+            <th>Quantity</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Apples</td>
+            <td>$1</td>
+            <td>7</td>
+          </tr>
+          <tr>
+            <td>Lemonade</td>
+            <td>$2</td>
+            <td>18</td>
+          </tr>
+          <tr>
+            <td>Bread</td>
+            <td>$3</td>
+            <td>2</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>Clever Quotes</h2>
       <p>
-        <small>Authors</small><br/>
-        <small><a href="">Links</a></small><br/>
+        These guys come in two forms, inline: <q cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">The nice thing about standards is that there are so many to choose from</q> and block:
+      </p>
+      <blockquote cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
+        &ldquo;For years there has been a theory that millions of monkeys typing at random on millions of typewriters would
+        reproduce the entire works of Shakespeare. The Internet has proven this theory to be untrue.&rdquo;
+      </blockquote>
+    </section>
+
+    <section>
+      <h2>Intergalactic Interconnections</h2>
+      <p>
+        You can link between slides internally,
+        <a href="#/3">like this</a>.
       </p>
     </section>
+
+    <section data-auto-animate data-auto-animate-easing="cubic-bezier(0.770, 0.000, 0.175, 1.000)">
+      <h2>Auto-Animate</h2>
+      <p>Automatically animate matching elements across slides with <a href="https://revealjs.com/auto-animate/">Auto-Animate</a>.</p>
+      <div class="r-hstack justify-center">
+        <div data-id="box1" style="background: #999; width: 50px; height: 50px; margin: 10px; border-radius: 5px;"></div>
+        <div data-id="box2" style="background: #999; width: 50px; height: 50px; margin: 10px; border-radius: 5px;"></div>
+        <div data-id="box3" style="background: #999; width: 50px; height: 50px; margin: 10px; border-radius: 5px;"></div>
+      </div>
+    </section>
+    <section data-auto-animate data-auto-animate-easing="cubic-bezier(0.770, 0.000, 0.175, 1.000)">
+      <div class="r-hstack justify-center">
+        <div data-id="box1" data-auto-animate-delay="0" style="background: cyan; width: 150px; height: 100px; margin: 10px;"></div>
+        <div data-id="box2" data-auto-animate-delay="0.1" style="background: magenta; width: 150px; height: 100px; margin: 10px;"></div>
+        <div data-id="box3" data-auto-animate-delay="0.2" style="background: yellow; width: 150px; height: 100px; margin: 10px;"></div>
+      </div>
+      <h2 style="margin-top: 20px;">Auto-Animate</h2>
+    </section>
+    <section data-auto-animate data-auto-animate-easing="cubic-bezier(0.770, 0.000, 0.175, 1.000)">
+      <div class="r-stack">
+        <div data-id="box1" style="background: cyan; width: 300px; height: 300px; border-radius: 200px;"></div>
+        <div data-id="box2" style="background: magenta; width: 200px; height: 200px; border-radius: 200px;"></div>
+        <div data-id="box3" style="background: yellow; width: 100px; height: 100px; border-radius: 200px;"></div>
+      </div>
+      <h2 style="margin-top: 20px;">Auto-Animate</h2>
+    </section>
+
+    <section style="text-align: left;">
+      <h1>THE END</h1>
+      <p>
+        - <a href="https://revealjs.com/">Check out Reveal JS!</a> <br>
+        - <a href="https://github.com/burnpiro/presentation-template">And Kemal's template (additional plugins)!</a>
+      </p>
+    </section>
+
   </div>
 </div>
 
